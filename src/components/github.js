@@ -7,6 +7,8 @@ import DisplayRepos from "./DisplayRepos";
 const Github = () => {
   const [input, setInput] = useState();
   const [repos, setRepos] = useState([]);
+  const [repoData, setRepoData] = useState({});
+  const [submit, setSubmit] = useState(false);
 
   const handleInputs = (e) => {
     setInput(e.target.value);
@@ -19,10 +21,15 @@ const Github = () => {
       )
       .then((res) => {
         setRepos(res.data.items);
+        setRepoData({
+          count: res.data.total_count,
+          gitUsername: res?.data?.items[0]?.owner?.login,
+        });
+        setSubmit(true);
         console.log(res);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("not found");
       });
   };
 
@@ -54,7 +61,7 @@ const Github = () => {
           </button>
         </div>
       </div>
-      <DisplayRepos allRepos={repos} />
+      <DisplayRepos allRepos={repos} reposInfo={repoData} flag={false} />
     </div>
   );
 };
