@@ -13,9 +13,9 @@ const DisplayRepos = ({ allRepos, reposInfo, flag }) => {
       {flag && (
         <>
           <section>
-            <div className="container py-3 h-100">
+            <div className="container py-5 h-10">
               <div className="row d-flex justify-content-center align-items-center h-100">
-                <div className="col-8">
+                <div className="col-6">
                   <div className="card" style={{ borderRadius: "15px" }}>
                     <div className="card-body p-4">
                       <div className="d-flex text-black">
@@ -23,7 +23,7 @@ const DisplayRepos = ({ allRepos, reposInfo, flag }) => {
                           <img
                             src={allRepos[0].owner.avatar_url}
                             className="img-fluid"
-                            style={{ width: "100px" }}
+                            style={{ width: "100px", borderRadius: "10px" }}
                           />
                         </div>
                         <div className="flex-grow-1 ms-3">
@@ -32,13 +32,11 @@ const DisplayRepos = ({ allRepos, reposInfo, flag }) => {
     Senior Journalist
   </p> */}
                           <div
-                            className="d-flex justify-content-start rounded-3 p-2 mb-2"
+                            className="d-flex justify-content-start rounded-3 p-2 mb-4"
                             style={{ backgroundColor: "#efefef" }}
                           >
                             <div>
-                              <p className="small text-muted mb-1">
-                                Total Repos
-                              </p>
+                              Total Repos
                               <p className="mb-0">{count}</p>
                             </div>
                             {/* <div className="px-3">
@@ -76,7 +74,7 @@ const DisplayRepos = ({ allRepos, reposInfo, flag }) => {
             <div className="container">
               <div className="row">
                 {allRepos.map((repo) => (
-                  <div className="col-6">
+                  <div className="col-12">
                     <div className="card">
                       <p className="card-header">
                         {/* <a href={repo.html_url} target="_blank"> */}

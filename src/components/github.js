@@ -41,7 +41,7 @@ const Github = () => {
     <>
       <p style={{ textAlign: "right", marginRight:"10%"}}>
         <br />
-        Developed by Sachin(Ranganath) K{" "}
+        Developed by Sachin(Ranganath) K
       </p>
       <div className="container">
         <br />
