@@ -31,15 +31,17 @@ const Github = () => {
           gitUsername: res?.data?.items[0]?.owner?.login,
         });
         reset();
+        setRepoNotFound(false);
       })
       .catch((err) => {
         setRepoNotFound(true);
+        reset();
       });
   };
 
   return (
     <>
-      <p style={{ textAlign: "right", marginRight:"10%"}}>
+      <p style={{ textAlign: "right", marginRight: "10%" }}>
         <br />
         Developed by Sachin(Ranganath) K
       </p>
@@ -69,6 +71,10 @@ const Github = () => {
             <button className="btn btn-primary" onClick={getRepos}>
               Fetch Repos
             </button>
+            <br /> <br />
+            {repoNotFound && (
+              <p style={{ color: "red" }}>Repository not found..!</p>
+            )}
           </div>
         </div>
         <DisplayRepos allRepos={repos} reposInfo={repoData} flag={false} />
