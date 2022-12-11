@@ -16,8 +16,8 @@ const DisplayRepos = ({ allRepos, reposInfo, flag }) => {
             <div className="container py-5 h-10">
               <div className="row d-flex justify-content-center align-items-center h-100">
                 <div className="col-6">
-                  <div className="card" style={{ borderRadius: "15px" }}>
-                    <div className="card-body p-4">
+                 
+                   
                       <div className="d-flex text-black">
                         <div className="flex-shrink-0">
                           <img
@@ -38,7 +38,7 @@ const DisplayRepos = ({ allRepos, reposInfo, flag }) => {
                             <div>
                               Total Repos
                               <p className="mb-0">{count}</p>
-                            </div>
+                           
                             {/* <div className="px-3">
     <p className="small text-muted mb-1">Followers</p>
     <p className="mb-0">976</p>
@@ -47,7 +47,7 @@ const DisplayRepos = ({ allRepos, reposInfo, flag }) => {
     <p className="small text-muted mb-1">Rating</p>
     <p className="mb-0">8.5</p>
   </div> */}
-                          </div>
+                          
                           {/* <div className="d-flex pt-1">
     <button
       type="button"
