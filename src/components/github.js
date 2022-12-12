@@ -73,7 +73,9 @@ const Github = () => {
             </button>
             <br /> <br />
             {repoNotFound && (
-              <p style={{ color: "red" }}>Repository not found..!</p>
+              <p style={{ color: "red" }}>
+                Account not found or you have not added any repos..!
+</p>
             )}
           </div>
         </div>
